@@ -9,10 +9,25 @@
     "build": "astro build",
     "preview": "astro preview",
     "astro": "astro",
+    "lint:eslint": "eslint --ignore-path .gitignore . --ext .js,.ts,.astro,.cjs,.mjs",
     "lint:prettier": "prettier --check --ignore-path .gitignore './**/*.{astro,js,jsx,ts,cjs,mjs,json,css}'",
+    "fix:eslint": "npm run lint:eslint -- --fix",
     "fix:prettier": "prettier --write --ignore-path .gitignore './**/*.{astro,js,ts,cjs,mjs,json,css}'"
   },
   "dependencies": {
     "astro": "^1.9.0"
+  },
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^5.48.2",
+    "@typescript-eslint/parser": "^5.48.2",
+    "eslint": "^8.32.0",
+    "eslint-config-prettier": "^8.6.0",
+    "eslint-config-standard-with-typescript": "^31.0.0",
+    "eslint-plugin-astro": "^0.23.0",
+    "eslint-plugin-import": "^2.27.5",
+    "eslint-plugin-jsx-a11y": "^6.7.1",
+    "eslint-plugin-n": "^15.6.1",
+    "eslint-plugin-promise": "^6.1.1",
+    "eslint-plugin-unused-imports": "^2.0.0"
   }
 }
