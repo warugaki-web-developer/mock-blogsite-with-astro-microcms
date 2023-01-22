@@ -10,8 +10,10 @@
     "preview": "astro preview",
     "astro": "astro",
     "lint:eslint": "eslint --ignore-path .gitignore . --ext .js,.ts,.astro,.cjs,.mjs",
+    "lint:stylelint": "stylelint ./src/**/*.{css,astro}",
     "lint:prettier": "prettier --check --ignore-path .gitignore './**/*.{astro,js,jsx,ts,cjs,mjs,json,css}'",
     "fix:eslint": "npm run lint:eslint -- --fix",
+    "fix:stylelint": "stylelint --fix ./src/**/*.{css,astro}",
     "fix:prettier": "prettier --write --ignore-path .gitignore './**/*.{astro,js,ts,cjs,mjs,json,css}'"
   },
   "dependencies": {
@@ -28,6 +30,13 @@
     "eslint-plugin-jsx-a11y": "^6.7.1",
     "eslint-plugin-n": "^15.6.1",
     "eslint-plugin-promise": "^6.1.1",
-    "eslint-plugin-unused-imports": "^2.0.0"
+    "eslint-plugin-unused-imports": "^2.0.0",
+    "postcss-html": "^1.5.0",
+    "stylelint": "^14.16.1",
+    "stylelint-config-html": "^1.1.0",
+    "stylelint-config-prettier": "^9.0.4",
+    "stylelint-config-recess-order": "^3.1.0",
+    "stylelint-config-standard": "^29.0.0",
+    "stylelint-rscss": "^0.4.0"
   }
 }
