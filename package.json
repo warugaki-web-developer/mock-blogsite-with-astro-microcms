@@ -8,9 +8,40 @@
     "start": "astro dev",
     "build": "astro build",
     "preview": "astro preview",
-    "astro": "astro"
+    "astro": "astro",
+    "lint:eslint": "eslint --ignore-path .gitignore . --ext .js,.ts,.astro,.cjs,.mjs",
+    "lint:stylelint": "stylelint ./src/**/*.{css,astro}",
+    "lint:prettier": "prettier --check --ignore-path .gitignore './**/*.{astro,js,jsx,ts,cjs,mjs,json,css}'",
+    "fix:eslint": "npm run lint:eslint -- --fix",
+    "fix:stylelint": "stylelint --fix ./src/**/*.{css,astro}",
+    "fix:prettier": "prettier --write --ignore-path .gitignore './**/*.{astro,js,ts,cjs,mjs,json,css}'"
   },
   "dependencies": {
-    "astro": "^1.9.0"
-  }
+    "astro": "^1.9.0",
+    "autoprefixer": "^10.4.13"
+  },
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^5.48.2",
+    "@typescript-eslint/parser": "^5.48.2",
+    "eslint": "^8.32.0",
+    "eslint-config-prettier": "^8.6.0",
+    "eslint-config-standard-with-typescript": "^31.0.0",
+    "eslint-plugin-astro": "^0.23.0",
+    "eslint-plugin-import": "^2.27.5",
+    "eslint-plugin-jsx-a11y": "^6.7.1",
+    "eslint-plugin-n": "^15.6.1",
+    "eslint-plugin-promise": "^6.1.1",
+    "eslint-plugin-unused-imports": "^2.0.0",
+    "postcss-html": "^1.5.0",
+    "postcss-nesting": "^10.2.0",
+    "stylelint": "^14.16.1",
+    "stylelint-config-html": "^1.1.0",
+    "stylelint-config-prettier": "^9.0.4",
+    "stylelint-config-recess-order": "^3.1.0",
+    "stylelint-config-standard": "^29.0.0",
+    "stylelint-rscss": "^0.4.0"
+  },
+  "browserslist": [
+    "defaults"
+  ]
 }
