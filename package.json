@@ -3,6 +3,10 @@
   "type": "module",
   "version": "0.0.1",
   "private": true,
+  "engines": {
+    "node": "18.12.0",
+    "npm": "8.19.2"
+  },
   "scripts": {
     "dev": "astro dev",
     "start": "astro dev",
@@ -12,6 +16,7 @@
     "lint:eslint": "eslint --ignore-path .gitignore . --ext .js,.ts,.astro,.cjs,.mjs",
     "lint:stylelint": "stylelint ./src/**/*.{css,astro}",
     "lint:prettier": "prettier --check --ignore-path .gitignore './**/*.{astro,js,jsx,ts,cjs,mjs,json,css}'",
+    "lint:markuplint": "markuplint './src/**/*.astro'",
     "fix:eslint": "npm run lint:eslint -- --fix",
     "fix:stylelint": "stylelint --fix ./src/**/*.{css,astro}",
     "fix:prettier": "prettier --write --ignore-path .gitignore './**/*.{astro,js,ts,cjs,mjs,json,css}'"
