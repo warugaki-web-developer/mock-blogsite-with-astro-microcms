@@ -15,5 +15,6 @@
   "css.validate": false,
   "scss.validate": false,
   "stylelint.enable": true,
-  "stylelint.validate": ["css", "scss", "astro"]
+  "stylelint.validate": ["css", "scss", "astro"],
+  "typescript.tsdk": "node_modules/typescript/lib"
 }
